@@ -143,7 +143,7 @@ export default function PanelRight({ extraDrawerContent }) {
                 <Box display={"flex"} gap={2} alignItems={"center"}>
                   <Avatar
                     alt="Brian Ruiz"
-                    src="https://www.b-r.io/avatar.png"
+                    src="https://avatars.githubusercontent.com/u/13897276?v=4"
                     sx={{ width: 64, height: 64, backgroundColor: "divider" }}
                   >
                     BR
@@ -166,10 +166,10 @@ export default function PanelRight({ extraDrawerContent }) {
                     </Typography>
                   </div>
                 </Box>
-                <Typography variant="body2" sx={{  color: "text.secondary" }}>
-                  I'm a full-stack Software Engineer based out of Houston, TX. 
-                  Here you'll find my personal blog posts and case studies 
-                  on all things tech.
+                <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                  I'm a full-stack Software Engineer based out of Houston, TX.
+                  Here you'll find my personal blog posts and case studies on
+                  all things tech.
                 </Typography>
               </Box>
             )}

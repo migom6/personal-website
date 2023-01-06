@@ -18,8 +18,8 @@ import MuiLink from "@mui/material/Link"
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined"
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined"
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz"
-import StarBorderIcon from '@mui/icons-material/StarBorder';
-import ForkRightIcon from '@mui/icons-material/ForkRight';
+import StarBorderIcon from "@mui/icons-material/StarBorder"
+import ForkRightIcon from "@mui/icons-material/ForkRight"
 
 import {
   createTheme,
@@ -69,7 +69,7 @@ const Layout = ({
                 },
                 text: {
                   primary: "#1d1d1f",
-              postBody: "#1d1d1f",
+                  postBody: "#1d1d1f",
                   disabled: "rgba(0, 0, 0, 0.48)",
                 },
                 background: {
@@ -102,7 +102,7 @@ const Layout = ({
   )
 
   theme = responsiveFontSizes(theme)
-  
+
   // get stars and forks from https://api.github.com/repos/BrianRuizy/gatsby-medium-blog
   const [githubStars, setGithubStars] = React.useState(0)
   const [githubForks, setGithubForks] = React.useState(0)
@@ -112,10 +112,8 @@ const Layout = ({
       .then(data => {
         setGithubStars(data.stargazers_count)
         setGithubForks(data.forks_count)
-      }
-      )
+      })
   }, [])
-
 
   return (
     <>
@@ -158,8 +156,8 @@ const Layout = ({
                     >
                       {isRootPath && (
                         <Avatar
-                          alt="Brian Ruiz"
-                          src="https://www.b-r.io/avatar.png"
+                          alt="Madhurjya Pegu"
+                          src="https://avatars.githubusercontent.com/u/13897276?v=4"
                           sx={{
                             width: 48,
                             height: 48,
@@ -243,7 +241,7 @@ const Layout = ({
                               lineHeight: "20px",
                             }}
                           >
-                            More stories from Brian
+                            More stories from Madhurjya
                           </Typography>
                           <Button
                             variant="outlined"
@@ -310,7 +308,8 @@ const Layout = ({
                               },
                             }}
                           >
-                            {" "}Built by Brian Ruiz
+                            {" "}
+                            Built by Madhurjya Pegu
                           </Box>
                         </Typography>
                       </Box>

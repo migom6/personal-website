@@ -4,7 +4,7 @@ description: "A vlog of my day as a Full Stack Engineer based out of Texas worki
 date: "2022-10-29"
 category: "Blog"
 tags: ["Javascript", "Fundamentals", "Software Engineer"]
-featuredImage: "./wfh.png"
+featuredImage: "./image.webp"
 pinned: false
 ---
 
@@ -32,6 +32,7 @@ console.log(character2.name) // venom
 
 There are 5 primitive types in JavaScript.
 
+```
 | Type      | How to initialize      | console.log(typeof a) |
 | --------- | ---------------------- | --------------------- |
 | number    | var a = 1;             | "number"              |
@@ -39,6 +40,7 @@ There are 5 primitive types in JavaScript.
 | string    | var a = "hello world"; | "string"              |
 | null      | var a = null;          | "object"              |
 | undefined | var a;                 | "undefined"           |
+```
 
 Number, boolean, string types are relatively straight forward if you have had some prior programming experience. As for a value is **undefined** when we have not initialized a variable with a value or when there is no return statement in a function, it returns undefined. The value **null** represents the intentional absence of any object value. Null is used mainly to deference an object.  
 The **typeof** operator is mainly used to identify the type of a primitive type. In the above table there is an anomaly for the null type strictly due to legacy reason. Therefore the best way to identify if a value is null by
@@ -53,23 +55,25 @@ console.log(a === "null") // true
 Values of these reference types are known as object. These are also synonymous with Classes from other programming languages. Objects are just key, value pairs in JavaScript, these values can be primitive values or other objects.
 Other than primitive types, everything is an object in JavaScript. There are two ways to initializing variables (actual and literal). Actual form of initializing an object is using the **new** keyword. Literal form of initializing is the same way of initializing an object but in a simpler syntax.
 
+```
 | Type     | How to Initialize                              | Initializing using Literal Form                      |
 | -------- | ---------------------------------------------- | ---------------------------------------------------- |
 | Array    | var a = new Array(1, 2, 3);                    | var a = [1, 2, 3]                                    |
 | Date     | var a = new Date();                            | N/A                                                  |
 | Error    | var a = new Error("some error occurred");      | N/A                                                  |
-| Function | var a = new Function("console.log('hello');"); | var a = function () {<br> console.log("hello");<br>} |
+| Function | var a = new Function("console.log('hello');"); | var a = function () { console.log("hello"); } |
 | Object   | var a = new Object();                          | var a = {}                                           |
 | RegExp   | var a = new RegExp("\\d+");                    | var a = /\d+/g                                       |
+```
 
 We can access properties using dot operator or the square bracket operator. The square bracket operator is useful when accessing a property dynamically.
 We can dereference an object using the **null** value, this way we directly free up the memory for that variable.
 
-````
-
-var character = { name: "venom" }; character = null; // free the memory
-
+```javascript
+var character = { name: "venom" }
+character = null // free the memory
 // accessing a method character = { name: "venom" }; console.log(character.name); // "venom" var keyName = "name"; console.log(character\[keyName\]; // "venom" \`\`\`
+```
 
 ### More in depth with types
 
@@ -86,7 +90,7 @@ var temp = new String(character)
 var lowercased = temp.toLowerCase()
 temp = null
 console.log(lowercased) // "spiderman"
-````
+```
 
 We can also use these primitive wrapper type in our code to create reference types of the primitive types manually, but it's a good practice to avoid using these primitive wrappers whenever we can
 

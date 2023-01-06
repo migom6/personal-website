@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -15,7 +15,7 @@ import Layout from "../components/layout"
 import shortcodes from "../components/MdxComponents"
 import Seo from "../components/seo"
 import Post from "../templates/post"
-import ProgressAppBar from "../components/ProgressAppBar";
+import ProgressAppBar from "../components/ProgressAppBar"
 
 import Avatar from "@mui/material/Avatar"
 import Box from "@mui/material/Box"
@@ -173,23 +173,23 @@ const PostDetailTemplate = ({ data, location }) => {
     }, 700)
   }
 
-   //Width State
-   const [width, setWidth] = useState(0)
-   // scroll function
-   const scrollHeight = () => {
-     var el = document.documentElement,
-       ScrollTop = el.scrollTop || document.body.scrollTop,
-       ScrollHeight = el.scrollHeight || document.body.scrollHeight
-     var percent = (ScrollTop / (ScrollHeight - el.clientHeight)) * 100
-     // store percentage in state
-     setWidth(percent)
-   }
+  //Width State
+  const [width, setWidth] = useState(0)
+  // scroll function
+  const scrollHeight = () => {
+    var el = document.documentElement,
+      ScrollTop = el.scrollTop || document.body.scrollTop,
+      ScrollHeight = el.scrollHeight || document.body.scrollHeight
+    var percent = (ScrollTop / (ScrollHeight - el.clientHeight)) * 100
+    // store percentage in state
+    setWidth(percent)
+  }
 
-   //useEffect to control the component lifecycle
-   useEffect(() => {
-     window.addEventListener("scroll", scrollHeight)
-     return () => window.removeEventListener("scroll", scrollHeight)
-   })
+  //useEffect to control the component lifecycle
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHeight)
+    return () => window.removeEventListener("scroll", scrollHeight)
+  })
 
   return (
     <Layout
@@ -217,13 +217,12 @@ const PostDetailTemplate = ({ data, location }) => {
         </Box>
       }
     >
-      <ProgressAppBar text={post.frontmatter.title} percent={width}/>
+      <ProgressAppBar text={post.frontmatter.title} percent={width} />
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
       <article itemScope itemType="http://schema.org/Article">
-
         <Container
           maxWidth="string"
           disableGutters
@@ -247,7 +246,7 @@ const PostDetailTemplate = ({ data, location }) => {
               <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
                 <Avatar
                   alt="Brian Ruiz"
-                  src="../avatar.png"
+                  src="https://avatars.githubusercontent.com/u/13897276?v=4"
                   sx={{
                     width: 48,
                     height: 48,
@@ -278,7 +277,7 @@ const PostDetailTemplate = ({ data, location }) => {
                 </Stack>
               </Box>
               {/* social share */}
-              <Stack direction="row" spacing={.5} alignItems="center">
+              <Stack direction="row" spacing={0.5} alignItems="center">
                 <Tooltip
                   PopperProps={{ disablePortal: true }}
                   open={open}
@@ -297,7 +296,7 @@ const PostDetailTemplate = ({ data, location }) => {
                   sx={{
                     fontSize: "15px",
                     color: "text.secondary",
-                    
+
                     "* > svg": {
                       color: "action.active",
                       fill: "currentColor",
@@ -306,17 +305,18 @@ const PostDetailTemplate = ({ data, location }) => {
                       width: "40px !important",
                       height: "40px !important",
                       backgroundColor: "none",
-                      transition: "background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+                      transition:
+                        "background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
                       "&:hover": {
                         backgroundColor: "action.hover",
                         opacity: "initial",
                       },
                       "&:focus": {
                         backgroundColor: "action.selected",
-                        transition: "background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-
-                      }
-                    }
+                        transition:
+                          "background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+                      },
+                    },
                   }}
                 >
                   <Provider

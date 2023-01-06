@@ -2,17 +2,17 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Brian Ruiz`,
+    title: `Madhurjya Pegu`,
     author: {
-      name: `Brian Ruiz`,
+      name: `Madhurjya Pegu`,
       summary: `Brian Ruiz is a Software Engineer based out of Houston, TX.`,
     },
     description: `Brian Ruiz is a Software Engineer based out of Houston, TX.`,
     siteUrl: `https://b-r.io`,
     social: {
-      linkedin: `brianruizy`,
-      github: `BrianRuizy`,
-      instagram: `brianruizy`,
+      linkedin: `migom6`,
+      github: `migom6`,
+      instagram: `migom6`,
       youtube: `UCCIFp-Se_xjfYc94H04oK7Q`,
     },
   },
@@ -43,7 +43,7 @@ module.exports = {
               maxWidth: 1440,
               quality: 100,
               showCaptions: true,
-              wrapperStyle: `margin: 2rem 0; padding: 0;`
+              wrapperStyle: `margin: 2rem 0; padding: 0;`,
             },
           },
           {
@@ -194,18 +194,18 @@ module.exports = {
         theme_color: `???`,
         display: `standalone`,
         icon: "src/images/gatsby-icon.png",
-        icons : [
+        icons: [
           {
-            "src": "/favicons/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png",
+            src: "/favicons/android-chrome-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
           },
           {
-            "src": "/favicons/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any maskable"
-          }
+            src: "/favicons/android-chrome-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any maskable",
+          },
         ],
         theme_color_in_head: false, // This will avoid adding theme-color meta gtag.
       },
@@ -219,7 +219,7 @@ module.exports = {
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        queries: require("./src/utils/algolia-queries")
+        queries: require("./src/utils/algolia-queries"),
       },
     },
   ],
